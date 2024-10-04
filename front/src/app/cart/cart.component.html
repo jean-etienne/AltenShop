@@ -1,0 +1,21 @@
+<p-dataView #dv [value]="cartItems">
+  <ng-template pTemplate="list" let-items>
+      <ng-container *ngFor="let item of items;">
+        <!-- trackBy: trackByFn -->
+          <p-card class="block mb-2">
+              <span class="font-medium text-secondary text-sm">Categorie : {{ item.product.category }}</span>
+              <div class="text-lg font-medium text-900 mt-2">Nom : {{ item.product.name }}</div>
+              <div>Quantité : {{ item.quantity }}</div>
+              <div>Prix unitaire : {{ item.product.price }} €</div>
+              <div>Prix total : {{ item.product.price * item.quantity }} €</div>
+
+              <ng-template pTemplate="footer">
+                  <div class="flex gap-3 mt-1">
+                    <p-button label="ajouter" severity="info" (onClick)="addItemOnProductInCart(item.product)"/>
+                      <p-button label="Supprimer" severity="danger" (onClick)="onDelete(item.product)" />
+                  </div>
+              </ng-template>
+          </p-card>
+      </ng-container>
+  </ng-template>
+</p-dataView>

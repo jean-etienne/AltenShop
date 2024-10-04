@@ -1,0 +1,16 @@
+CREATE TABLE products {
+    id DOUBLE PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    code VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    image TEXT,
+    category VARCHAR(255) NOT NULL,
+    price INT ,
+    quantity INT NOT NULL,
+    internalreference VARCHAR(255) NOT NULL,
+    shellid INT NOT NULL,
+    inventorystatus integer NOT NULL,
+    rating INT,
+    created_at DATE,
+    updated_at DATE,
+}
