@@ -15,6 +15,7 @@ import com.alten.techtest.services.ContactService;
 @RequestMapping(path="/contact")
 public class contactController {
 
+    
     @Autowired
     private ContactService contactService;
 
